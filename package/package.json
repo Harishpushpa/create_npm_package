@@ -1,0 +1,42 @@
+{
+  "name": "license-gatekeeper",
+  "version": "1.0.0",
+  "description": "Automatically blocks git commits when npm dependencies use licenses that restrict commercial use — checked via SPDX rules, npm registry data, and AI verification.",
+  "main": "scripts/checkLicenses.js",
+  "bin": {
+    "license-gatekeeper": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    ".env.example"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/setupHusky.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harishpushpa/create_npm_package.git"
+  },
+  "keywords": [
+    "license",
+    "npm",
+    "compliance",
+    "commercial",
+    "husky",
+    "pre-commit",
+    "legal"
+  ],
+  "author": "Harish Balu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Harishpushpa/create_npm_package/issues"
+  },
+  "homepage": "https://github.com/Harishpushpa/create_npm_package#readme",
+  "dependencies": {
+    "license-checker": "^25.0.1",
+    "axios": "^1.20.0",
+    "dotenv": "^16.4.5",
+    "husky": "^9.1.7"
+  }
+}
