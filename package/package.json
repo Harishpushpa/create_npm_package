@@ -4,7 +4,7 @@
   "description": "Automatically blocks git commits when npm dependencies use licenses that restrict commercial use — checked via SPDX rules, npm registry data, and AI verification.",
   "main": "scripts/checkLicenses.js",
   "bin": {
-    "license-gatekeeper": "./bin/cli.js"
+  "license-gatekeeper": "./bin/cli.js"
   },
   "files": [
     "bin",

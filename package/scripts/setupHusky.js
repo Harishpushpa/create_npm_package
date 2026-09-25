@@ -12,13 +12,13 @@ try {
   console.log('DEBUG checking gitDir at:', gitDir);
 
   if (fs.existsSync(gitDir)) {
-    console.log('🔧 Setting up license-guard pre-commit hook...');
+    console.log('🔧 Setting up license-gatekeeper pre-commit hook...');
     execSync('npx husky init', { stdio: 'inherit', cwd });
 
     const preCommitPath = path.join(cwd, '.husky', 'pre-commit');
-    fs.writeFileSync(preCommitPath, 'npx license-guard\n');
+fs.writeFileSync(preCommitPath, 'npx --no-install license-gatekeeper\n');
 
-    console.log('✅ license-guard pre-commit hook installed!');
+    console.log('✅ license-gatekeeper pre-commit hook installed!');
   } else {
     console.log('⚠️  No git repo found — skipping husky setup. Run "git init" first.');
   }
